@@ -1,0 +1,32 @@
+html, body{
+	height: 100%;
+}
+.container{
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+}
+.box {
+  width: 300px;
+  border: 10px solid #6600cc;
+  margin: 20px;
+  background: lightgrey;
+}
+
+.box1 {
+  width: 300px;
+  margin: 20px;
+   padding: 20px;
+}
+
+.box2 {
+  width: 300px;
+  margin: 20px;
+   padding: 20px;
+}
+
+.box3 {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+}
