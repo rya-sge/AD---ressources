@@ -1,3 +1,13 @@
+""" ---------------------------
+File : diffie-hellman-key-exchange.py
+Authors : Ryan Sauge
+Source : based on  Key Exchange challenge of BuckeyeCTF 
+https://ctftime.org/event/1434/tasks/
+Date : 28.10.2021
+
+Purpose : Implementation of Diffie-Hellman protocol
+--------------------------- """
+
 import random
 import hashlib
 
