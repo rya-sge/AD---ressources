@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlin.random.Random
 
-class Activity2 : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
@@ -19,7 +19,7 @@ class Activity2 : AppCompatActivity() {
             Start a new Intent and pass the result to him
          */
         val resultIntent = Intent()
-        resultIntent.putExtra("result", result.toString())
+        resultIntent.putExtra(MainActivity.ExtraSecondActivity, result.toString())
         setResult(RESULT_OK, resultIntent)
         finish()
     }

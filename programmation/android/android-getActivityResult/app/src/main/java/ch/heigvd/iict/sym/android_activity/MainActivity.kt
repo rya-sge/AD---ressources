@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
             ActivityResultContracts.StartActivityForResult()
         ) {
             if (it.resultCode == Activity.RESULT_OK) {
-                val value = it.data?.getStringExtra("result")
+                val value = it.data?.getStringExtra(ExtraSecondActivity)
                 val text: TextView = findViewById(R.id.textViewResult)
                 text.setText(value)
             }
@@ -29,10 +29,14 @@ class MainActivity : AppCompatActivity() {
         // when user tap on the button
         button?.setOnClickListener()
         {
-            val intent = Intent(this, Activity2::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
             getResult.launch(intent)
         }
 
 
+    }
+
+    companion object {
+       const val ExtraSecondActivity = "resultSecond"
     }
 }
