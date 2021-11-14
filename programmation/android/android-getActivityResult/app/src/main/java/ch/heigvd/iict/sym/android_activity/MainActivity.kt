@@ -1,3 +1,10 @@
+/* ---------------------------
+File : MainActivity.tk
+Authors : Ryan Sauge
+Date : 14.11.2021
+Purpose : Starts a new activity when the user clicks on the button and retrieves its result
+--------------------------- */
+
 package ch.heigvd.iict.sym.android_activity
 
 import android.app.Activity

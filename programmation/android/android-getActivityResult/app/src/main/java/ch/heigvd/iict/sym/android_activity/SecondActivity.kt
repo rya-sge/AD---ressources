@@ -1,3 +1,10 @@
+/* ---------------------------
+File : SecondActivity.tk
+Authors : Ryan Sauge
+Date : 14.11.2021
+Purpose : Generate a random int and store it in an extra
+--------------------------- */
+
 package ch.heigvd.iict.sym.android_activity
 
 import android.content.Intent
