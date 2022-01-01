@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Search for anime to watch</title>
+</head>
+<body>
+    <form method=POST action="/anime">
+        <p> Captcha : <%= captcha %></p>
+        <input type='text' name='captcha' id ="captcha">Enter the captcha</input>
+    </form>
+    <br />
+    <button onClick="getAnime()">Asks for an anime</button>
+    <p id="response"></p>
+    <p id="response2"></p>
+
+<script>
+    /*
+    Get Anime
+     */
+    async function getAnime() {
+        //Retrieve the value of the captcha filled in by the user
+        let inputCaptcha = document.getElementById("captcha");
+        const requestJson = {
+            "captcha" : inputCaptcha.value
+        }
+
+        /*
+        Post request
+         */
+        const responseRaw = await fetch("/anime", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify(
+                requestJson)
+        });
+        console.log(responseRaw);
+
+        /*
+        Convert response from server to JSON
+         */
+        const response = await responseRaw.json();
+        console.log(response)
+        document.getElementById("response").textContent = response.animes[0].name;
+        document.getElementById("response2").textContent = response.animes[1].name;
+    }
+</script>
+</body>
