@@ -36,6 +36,8 @@ async function loadJson() {
     });
 
 }
+
+//Experimental module
 loadJson();
 import PERSONS_LIST from "./anime.json"
 console.log("****Read JSON with experimental import****")
