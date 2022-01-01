@@ -1,0 +1,16 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "Try some code to work with json",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">= 12.19"
+  },
+  "scripts": {
+    "start": "node --experimental-modules --experimental-json-modules app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rsa-sge",
+  "license": "ISC"
+}
