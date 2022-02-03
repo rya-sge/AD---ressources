@@ -15,10 +15,10 @@ console.log("****Read JSON with fs & readFileSync****")
 
 //synchronous way
 let rawdata = fs.readFileSync(FILE_PATH);
-let persons = JSON.parse(rawdata)
-console.log(persons);
-let mapPersons = persons.reduce((map, person) => map.set(person.id, person), new Map())
-console.log(mapPersons)
+let animes = JSON.parse(rawdata)
+console.log(animes);
+let mapAnimes = animes.reduce((map, anime) => map.set(anime.id, anime), new Map())
+console.log(mapAnimes)
 
 //non-blocking asynchronous way
 async function loadJson() {
@@ -30,18 +30,20 @@ async function loadJson() {
         // your JSON file content as object
         let data = JSON.parse(response);
         console.log("****Read JSON with fs & ReadFile****")
-        mapPersons = data.reduce((map, person) => map.set(person.id, person), new Map())
-        console.log(mapPersons)
-        return mapPersons;
+        mapAnimes = data.reduce((map, anime) => map.set(anime.id, anime), new Map())
+        console.log(mapAnimes)
+        return mapAnimes;
     });
 
 }
 
-//Experimental module
+//fs.readFile
 loadJson();
-import PERSONS_LIST from "./anime.json"
-console.log("****Read JSON with experimental import****")
-mapPersons = PERSONS_LIST.reduce((map, person) => map.set(person.id, person), new Map())
 
-console.log("**COnverto to map**")
-console.log(mapPersons)
+//Experimental module
+import ANIMES_LIST from "./anime.json"
+console.log("****Read JSON with experimental import****")
+mapAnimes = ANIMES_LIST.reduce((map, anime) => map.set(anime.id, anime), new Map())
+
+console.log("**Converto to map**")
+console.log(mapAnimes)
